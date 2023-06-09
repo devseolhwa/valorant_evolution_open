@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>발로란트 에볼루션</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://lolstatic-a.akamaihd.net/webfonts/live/css/valorant/fonts.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/popup.css">
+
+    <script src="assets/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/lib/gsap.min.js"></script>
+    <script src="assets/js/lib/ScrollTrigger.min.js"></script>
+    <script src="assets/js/lib/skrollr.min.js"></script>
+    <script src="assets/js/ScrambleTextPlugin.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/popup.js"></script>
+
+</head>
+<body>
+    
+    <!-- 라이엇바 상단 -->
+    <header id="riotbar-header"></header>
+    <header id="top-menu"></header>
+
+    <div class="wrap">
+        <div class="valorantBar"></div>
+
+        <a href="#leftmenu" id="btnMenuOpen"><span>메뉴열기</span></a>
+        <div id="leftmenu">
+            <h4>// 발로란트 공식 채널</h4>
+            <div class="channelGroup">
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel01.svg" alt="발로란트 채널"></a>
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel02.svg" alt="발로란트 유튜브"></a>
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel03.svg" alt="발로란트 인스타그램"></a>
+                <a href="#" target="_blank" title="새창열림"><img src="assets/images/icon_channel04.svg" alt="발로란트 페이스북"></a>
+            </div>
+            <h4>// 진행 중인 이벤트</h4>
+            <ul class="bannerGroup">
+                <li>
+                    <a href="#">
+                        <img src="assets/images/img_banner01.jpg" alt="">
+                        <p><img src="assets/images/icon_dotArrow.svg" alt="">VAL조각 이벤트</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/images/img_banner02.jpg" alt="">
+                        <p><img src="assets/images/icon_dotArrow.svg" alt="">사이VAL대학교</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/images/img_banner01.jpg" alt="">
+                        <p><img src="assets/images/icon_dotArrow.svg" alt="">VAL조각 이벤트</p>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" id="btnMenuclose">메뉴닫기</button>
+        </div><!-- leftmenu end -->
+        <div class="dim"></div>
+
+        <div class="floating">
+            <a href="#">
+                <img src="assets/images/img_valorantmark.png" alt="">
+                <p>발로란트<br />무료로 플레이하기</p>
+            </a>
+        </div>
+
+        <div class="visualSection">
+            <div class="visualVedio">
+                <video preload="true" muted="" loop="" playsinline="" autoplay src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt778f65cedfee54fd/63bcad5b08dfb21202a7794d/VAL_Ep6_Homepage-CG-Video_V5.mp4" poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte299f23c6e55ebed/63bcad4899e03c1edced9b6f/VAL_Ep6_Homepage-CG-Still.jpg">
+                </video>
+            </div>
+            <div class="visualInner">
+                <div class="visualText">
+                    <div class="textValorant">
+                        <img src="assets/images/text_valorant_red.png" alt="VALORANT" class="mobileHide">
+                        <img src="assets/images/text_valorant_red_m.png" alt="VALORANT" class="mobileShow">
+                    </div>
+                    <div class="textEffectHidden">
+                        <div class="textEffect titleLg">에볼루션</div>
+                    </div>
+                    <div class="textSm colorRed"><span class="scrambleText" id="startdate"></span> - <span class="scrambleText" id="enddate"></span></div>
+                    <p>팀 데스매치 플레이 미션 이벤트 진행중</p>
+                </div><!-- visualText end -->
+                <!-- [전달사항] RSO로그인을 하지 않은 경우 추가 -->
+                <!-- <div class="btnLine">
+                    <button type="button" class="btnEventJoin">
+                        <span class="bgHover"></span>
+                        <span>이벤트 참여하기</span>
+                    </button>
+                </div> -->
+            </div><!-- visualInner end -->
+            <button type="button" id="btnEvent"><span>이벤트 공유하기</span></button>
+        </div><!-- visualSection end -->
+
+        <div class="missionSection">
+            <div class="scrolltop"><img src="assets/images/text_valorant_vertical.png" alt="valorant"/></div>
+            <div class="missionInner">
+                <div class="missionHeader">
+                    <div class="title">
+                        <div class="textEffectHidden">
+                            <h3 class="textEffect colorRed">팀 데스매치</h3>
+                        </div>
+                        <h3 class="ml10">플레이 미션</h3>
+                    </div>
+                    <p class="text">100% 보상 획득 가능</p>
+                </div><!-- missionHeader end -->
+                <div class="missionBody">
+                    <div class="missionPlayArea">
+                        <div class="bounceRedBox"><p>지금 플레이하면 100% 획득 가능!</p></div>
+                        <div class="playItemGroup">
+                            <!-- [전달사항] 플레이 조건 충족시 .playItem에 .on 추가 -->
+                            <div class="playItem on">
+                                <p class="number">1회 플레이</p>
+                                <p class="mobileNumber">1회</p>
+                                <div class="item">
+                                    <div class="itemImg"><img src="assets/images/img_play1.png" alt=""></div>
+                                    <p class="itemName">에볼루션 카드 1장 <br class="mobileShow"/>물어 스프레이</p>
+                                </div>
+                            </div>
+                            <div class="playItem">
+                                <p class="number">2회 플레이</p>
+                                <p class="mobileNumber">2회</p>
+                                <div class="item">
+                                    <div class="itemImg"><img src="assets/images/img_play2.png" alt=""></div>
+                                    <p class="itemName">에볼루션 카드 1장</p>
+                                </div>
+                            </div>
+                            <div class="playItem">
+                                <p class="number">5회 플레이</p>
+                                <p class="mobileNumber">5회</p>
+                                <div class="item">
+                                    <div class="itemImg"><img src="assets/images/img_play5.png" alt=""></div>
+                                    <p class="itemName">에볼루션 카드 3장</p>
+                                </div>
+                            </div>
+                            <div class="playItem">
+                                <p class="number">10회 플레이</p>
+                                <p class="mobileNumber">10회</p>
+                                <div class="item">
+                                    <div class="itemImg"><img src="assets/images/img_play10.png" alt=""></div>
+                                    <p class="itemName">에볼루션 카드 5장 <br class="mobileShow"/>특별보상 응모</p>
+                                </div>
+                            </div>
+                            <div class="playItem">
+                                <p class="number">11회 이상 플레이</p>
+                                <p class="mobileNumber">11회+</p>
+                                <div class="item">
+                                    <div class="itemImg"><img src="assets/images/img_play2.png" alt=""></div>
+                                    <p class="itemName">에볼루션 카드 1장 <br class="mobileShow"/><span>(매일 1장 획득 가능)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- missionPlayArea end -->
+                    <div class="missionSpecialArea">
+                        <img src="assets/images/img_special_item.png" alt="컬쳐랜드 문화상품권 3만원 100개 LG 32GP850 모니터 10개" class="mobileHide">
+                        <img src="assets/images/img_special_item_m.png" alt="컬쳐랜드 문화상품권 3만원 100개 LG 32GP850 모니터 10개" class="mobileShow">
+                        <p>컬쳐랜드 문화상품권 3만원 // LG 32GP850 모니터</p>
+                        <div class="ta_c">
+                            <div class="btnLine">
+                                <!-- [전달사항] 활성화시 disabled 제거 -->
+                                <button type="button" class="btnSpecialItem" disabled>
+                                    <span class="bgHover"></span>
+                                    <span>특별보상 응모하기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- missionSpecialArea end -->
+                </div><!-- missionBody end -->
+            </div><!-- missionInner end -->
+        </div><!-- missionSection end -->
+
+        <div class="cardGetSection">
+            <div class="cardGetInner">
+                <div class="cardGetFlex">
+                    <div class="cardGetInfo">
+                        <div class="cardGetInfoInner">
+                            <div class="cardGetHeader">
+                                <div class="textEffectHidden">
+                                    <p class="textEffect">팀 데스매치 플레이하고</p>
+                                </div>
+                                <div class="textEffectHidden">
+                                    <h3 class="textEffect">에볼루션 카드 받기</h3>
+                                </div>
+                            </div><!-- cardGetHeader end -->
+                            <!-- <div class="phoneConfirm">
+                                <p>사전예약 보상(에볼루션 카드)을 획득하기 위해서는 휴대폰 인증이 필요합니다.</p>
+                                <button type="button" class="btnGetDetails">인증하기</button>
+                            </div> -->
+                            <div class="cardGetValue">
+                                <div class="cardGetNum">
+                                    <p><span>//</span>보유한 카드</p>
+                                    <!-- [전달사항] 로그인 전 class="off" -->
+                                    <strong>35</strong>
+                                    <button type="button" class="btnGetDetails">보상 획득 내역 &gt;</button>
+                                </div>
+                                <div class="teamPlayNum">
+                                    <p>// 팀 데스매치 플레이 횟수<span>100회</span></p>
+                                    <div class="textBalloon">
+                                        <p>
+                                            PC방에서 팀 데스매치 플레이하면,<br />
+                                            <span>VAL조각 이벤트</span> 상품 응모권 지급!
+                                        </p>
+                                    </div>
+                                    <button type="button" class="btnEventInfo">이벤트 유의사항</button>
+                                </div>
+                            </div>
+                        </div><!-- cardGetInfoInner end -->
+                    </div><!-- cardGetInfo end -->
+                    <div class="cardOpenWrap">
+                        <div class="cardBackImg">
+                            <div>
+                                <img src="assets/images/img_cardBack.png" alt="" class="mobileHide">
+                                <img src="assets/images/img_cardBack_m.png" alt="" class="mobileShow">
+                            </div>
+                            <div>
+                                <img src="assets/images/img_cardBack.png" alt="" class="mobileHide">
+                                <img src="assets/images/img_cardBack_m.png" alt="" class="mobileShow">
+                            </div>
+                            <div>
+                                <img src="assets/images/img_cardBack.png" alt="" class="mobileHide">
+                                <img src="assets/images/img_cardBack_m.png" alt="" class="mobileShow">
+                            </div>
+                        </div>
+                        <div class="ta_c">
+                            <!-- [전달사항] 로그인 전 -->
+                            <!-- <div class="btnLine">
+                                <button type="button" class="btnLoginChk">로그인 후 카드 확인</button>
+                            </div> -->
+                            <div class="btnLine">
+                                <!-- [전달사항] 활성화시 disabled 제거 -->
+                                <button type="button" class="btnCardOpen">
+                                    <span class="bgHover"></span>
+                                    <span>에볼루션 카드 오픈</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- cardOpenWrap end -->
+                </div><!-- cardGetFlex end -->
+            </div><!-- cardGetInner end -->
+        </div><!-- cardGetSection end -->
+
+        <div class="cardSlideSection">
+            <div class="cardSlideInner">
+                <div class="cardSlideHeader">
+                    <div class="textEffectHidden">
+                        <strong class="textEffect">매일매일 터지는 역대급 보상</strong>
+                    </div>
+                    <div class="textEffectHidden">
+                        <h3 class="textEffect">에볼루션 카드</h3>
+                    </div>
+                    <p>한정판 총기 장식부터 고급 게이밍 기어까지<br class="mobileShow"/> 100% 보상 당첨의 기회!</p>
+                </div><!-- cardSlideHeader end -->
+                <div class="cardSlideWrap">
+                    <div class="cardSlider">
+                        <div class="slideItem">
+                            <img src="assets/images/img_cardItem01.png" alt="상품명 이미지">
+                            <p class="name">Razer Basilisk X HyperSpeed</p>
+                        </div>
+                        <div class="slideItem">
+                            <img src="assets/images/img_cardItem02.png" alt="상품명 이미지">
+                            <p class="name">상품명</p>
+                        </div>
+                        <div class="slideItem">
+                            <img src="assets/images/img_cardItem03.png" alt="상품명 이미지">
+                            <p class="name">상품명 상품명</p>
+                        </div>
+                        <div class="slideItem">
+                            <img src="assets/images/img_cardItem04.png" alt="상품명 이미지">
+                            <p class="name">상품명 </p>
+                        </div>
+                        <div class="slideItem">
+                            <img src="assets/images/img_cardItem05.png" alt="상품명 이미지">
+                            <p class="name">상품명 상품명</p>
+                        </div>
+                        <div class="slideItem">
+                            <img src="assets/images/img_cardItem06.png" alt="상품명 이미지">
+                            <p class="name">상품명</p>
+                        </div>
+                    </div><!-- slideBox end -->
+                </div><!-- slideBoxWrap end -->
+            </div><!-- cardSlideInner end -->
+        </div><!-- cardSlideSection end -->
+
+        <div class="updateSection">
+            <div class="updateInner">
+                <div class="BgSlideImg">
+                    <p>
+                    <!-- 
+                        <video preload="true" muted="" loop="" playsinline="" autoplay src=""></video>
+                        <img src="" alt=""> 
+                    -->
+                    </p>
+                </div>
+                <div class="updateText">
+                    <div class="textEffectHidden">
+                        <h3 class="textEffect title">발로란트, 새로운 차원으로의 진화</h3>
+                    </div>
+                    <p class="text">에피소드 7: 에볼루션의 주요 업데이트 내용을 지금 미리 확인해보세요.</p>
+                </div>
+                <div class="updateTextSlide">
+                    <div class="textItem">
+                        <!-- [전달사항] .title 최대 10글자 .text 최대 85글자로 잡아주세요. -->
+                        <p class="title">팀 데스매치 팀 데스매치 팀</p>
+                        <p class="text">레디어나이트 포인트, 게이밍 기어, 문화상품권, 인게임 아이템 등 다양한 경품을 100% 획득할 수 있는 에피소드7 에볼루션 상자가 등장했습니다.</p>
+                    </div>
+                    <div class="textItem">
+                        <p class="title">팀 데스매치</p>
+                        <p class="text">레디어나이트 포인트, 게이밍 기어, 문화상품권, 인게임 아이템 등 다양한 경품을 100% 획득할 수 있는 에피소드7 에볼루션 상자가 등장했습니다.</p>
+                    </div>
+                    <div class="textItem">
+                        <p class="title">팀 데스매치 팀 데스매치</p>
+                        <p class="text">레디어나이트 포인트, 게이밍 기어, 문화상품권, 인게임 아이템 등 다양한 경품을 100% 획득할 수 있는 에피소드7 에볼루션 상자가 등장했습니다.</p>
+                    </div>
+                    <div class="textItem">
+                        <p class="title">팀 데스매치</p>
+                        <p class="text">레디어나이트 포인트, 게이밍 기어, 문화상품권, 인게임 아이템 등 다양한 경품을 100% 획득할 수 있는 에피소드7 에볼루션 상자가 등장했습니다.</p>
+                    </div>
+                </div><!-- updateTextSlide end -->
+                <div class="updateThumbSlide">
+                    <div class="thumbItem">
+                        <a href="#" target="_blank" title="새창열림">
+                            <p class="Thumb"><img src="assets/images/img_news01.jpg" alt=""></p>
+                        </a>
+                    </div>
+                    <div class="thumbItem">
+                        <a href="#" target="_blank" title="새창열림">
+                            <p class="Thumb">
+                                <video preload="true" muted="" loop="" playsinline="" autoplay src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt778f65cedfee54fd/63bcad5b08dfb21202a7794d/VAL_Ep6_Homepage-CG-Video_V5.mp4" poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blte299f23c6e55ebed/63bcad4899e03c1edced9b6f/VAL_Ep6_Homepage-CG-Still.jpg">
+                                </video>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="thumbItem">
+                        <a href="#" target="_blank" title="새창열림">
+                            <p class="Thumb"><img src="assets/images/img_news01.jpg" alt=""></p>
+                        </a>
+                    </div>
+                    <div class="thumbItem">
+                        <a href="#" target="_blank" title="새창열림">
+                            <p class="Thumb"><img src="assets/images/img_news02.jpg" alt=""></p>
+                        </a>
+                    </div>
+                </div><!-- updateThumbSlide end -->
+                <div class="updateArrow">
+                    <button class="prev">Prev</button>
+                    <button class="next">Next</button>
+                </div>
+            </div><!-- updateInner end -->
+            <div class="scrollLeft"><img src="assets/images/text_valorant_horizontal.png" alt="valorant"></div>
+        </div><!-- updateSection end -->
+
+    </div><!-- wrap end -->
+
+    <!-- 라이엇바 하단 -->
+    <footer id="riotbar-footer"></footer>
+    <script defer="defer" src="https://cdn.rgpub.io/public/live/riotbar/latest/kr-valorant-evergreen.ko_KR.js"></script><!-- 라이엇바 상하단 js -->
+    
+</body>
+</html>

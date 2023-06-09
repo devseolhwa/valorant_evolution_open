@@ -18,11 +18,24 @@ $(document).ready(function(){
         return false;
     });
 
-    // target
-    $("#btnReservation").click(function(e){            
-        e.preventDefault();
-        $("html, body").animate({scrollTop:$(this.hash).offset().top}, 500);
-    });
+    // pc mobile 환경체크
+    let filter = "win16|win32|win64|mac";
+    if(navigator.platform){
+        if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+            //alert("Mobile");
+            $(".floating").hide();
+        }else{
+            //alert("PC");
+            // floating 스크롤후 나타나기
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $(".floating").fadeIn("slow");
+                }else {
+                    $(".floating").fadeOut("slow");
+                }
+            });
+        }
+    }
 
     function textEffect(){
         $(".textEffect").each(function(){
@@ -50,7 +63,8 @@ $(document).ready(function(){
     gsap.registerPlugin(ScrambleTextPlugin);
     var $textElement = $(".scrambleText"),
         $textEpisode = $("#textEpisode");
-        $textDday = $("#textDday");
+        $startdate = $("#startdate");
+        $enddate = $("#enddate");
 
     let textTimeL01 = gsap.timeline({ 
         defaults: {duration: 2, ease: "power1.inOut", yoyo: false,}
@@ -58,9 +72,13 @@ $(document).ready(function(){
     let textTimeL02 = gsap.timeline({ 
         defaults: {duration: 2, ease: "power1.inOut", yoyo: false,}
     });
+    let textTimeL03 = gsap.timeline({ 
+        defaults: {duration: 2, ease: "power1.inOut", yoyo: false,}
+    });
 
     textTimeL01.to($textEpisode, {scrambleText:{text:"EPISODE_07", chars:"EPISODE_07"}});
-    textTimeL02.to($textDday, {scrambleText:{text:"2023. 06. 28", chars:"123456789"}});
+    textTimeL02.to($startdate, {scrambleText:{text:"2023.06.28", chars:"2023.06.28"}});
+    textTimeL03.to($enddate, {scrambleText:{text:"2023.07.31", chars:"2023.07.31"}});
 
     ScrollTrigger.create({
         trigger: $textElement,
@@ -68,15 +86,19 @@ $(document).ready(function(){
         onEnter: function(){
             textTimeL01.play();
             textTimeL02.play();
+            textTimeL03.play();
         },onLeave: function(){
             textTimeL01.pause();
             textTimeL02.pause();
+            textTimeL03.pause();
         },onEnterBack: function(){
             textTimeL01.play();
             textTimeL02.play();
+            textTimeL03.play();
         },onLeaveBack: function(){
             textTimeL01.pause();
             textTimeL02.pause();
+            textTimeL03.pause();
         }
     });
 
@@ -110,61 +132,23 @@ $(document).ready(function(){
         });
     });
 
-    // checkboxList
-    $("#reservationCheckAll").click(function() {
-        allTerms();
-    });
-    $("#reservationService, #reservationPrivacy, #reservationNews").click(function() {
-        checkTerms();
-    });
-    function allTerms() {
-        if ($("#reservationCheckAll").is(":checked")) {
-            $("#reservationService, #reservationPrivacy, #reservationNews").prop("checked",true);
-        } else {
-            $("#reservationService, #reservationPrivacy, #reservationNews").prop("checked",false);
-        }
-        return true;
-    }
-    function checkTerms() {
-        if(!$("#reservationService").is(":checked") || !$("#reservationPrivacy").is(":checked") || !$("#reservationNews").is(":checked")) {
-            $("#reservationCheckAll").prop("checked",false);
-        }
-        if($("#reservationService").is(":checked") && $("#reservationPrivacy").is(":checked") && $("#reservationNews").is(":checked")) {
-            $("#reservationCheckAll").prop("checked",true);
-        }
-        return true;
-    }
-
-    // 모바일 상품카드
-    let productSlideCheck = $(".productSlide");
-    if (productSlideCheck.length) {
-        $(".productSlideM").slick({
-            slidesToShow : 3,
-            slidesToScroll: 1,
-            //autoplay: false,
-            autoplaySpeed: 1300,
-            speed: 700,
+    // 에볼루션 카드 슬라이드
+    let cardSlideSectionCheck = $(".cardSlideSection");
+    if (cardSlideSectionCheck.length) {
+        $(".cardSlider").slick({
+            slidesToShow : 5,
+            slidesToScroll: "auto",
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 800,
             centerMode: true,
-            centerPadding : "0", 
             variableWidth: true,
             infinite: true,
-            pauseOnHover: false,
-            swipeToSlide: 1,
+            swipeToSlide: true ,
             draggable: true,
             arrows: false,
-            dots: true,
-        }).on("afterChange", function (event, slick, currentSlide) {
-            let total = slick.slideCount;
-            $(".productSlideMControl .number span").text(total < 10 ? "0" + total : total);
-        }).on("beforeChange", function(event, slick, currentSlide, nextSlide){
-            let i = (nextSlide ? nextSlide : 0) + 1;
-            $(".productSlideMControl .number p").text(i < 10 ? "0" + i : i);  
-        });
-
-        $(this).off("click", "#btnRemove").on("click", "#btnRemove", function(e) {
-            e.preventDefault();
-            $(".productSlideM").slick("slickRemove", 0);
-            $(".productSlideM").slick("slickPlay");
+            dots: false,
+            pauseOnHover: false
         });
     }
 
@@ -264,15 +248,14 @@ $(document).ready(function(){
         if (eval == "above") return ((y < (viewportHeight + wscrolltop)));
     }
 
+    
     var isVisible2 = false;
 
     $(window).on("scroll",function() {
-        if (checkVisible2($(".productSlide"))&&!isVisible2){
-            $(".productSection").addClass("start");
-            cardSlide.start(); // pc용 카드슬라이드 시작
+        if (checkVisible2($(".cardOpenWrap"))&&!isVisible2){
             setTimeout(function(){
-                $("#btnRemove").trigger("click");
-            }, 1300);
+                $(".cardGetSection").addClass("start");
+            }, 500);
             isVisible2 = true;
             return true;
         }
@@ -291,8 +274,9 @@ $(document).ready(function(){
 function urlCopy() {
     // url 복사
     const inputUrl = document.getElementById("inputUrl");
-    inputUrl.select();
-    document.execCommand("copy");
+    //inputUrl.select();
+    //document.execCommand("copy");
+    window.navigator.clipboard.writeText(inputUrl.value);
 
     var x = document.getElementById("toast")
     x.className = "show";
@@ -301,8 +285,9 @@ function urlCopy() {
 function codeCopy() {
     // 친구 초대 코드 복사
     const inputCode = document.getElementById("inputCode");
-    inputCode.select();
-    document.execCommand("copy");
+    //inputCode.select();
+    //document.execCommand("copy");
+    window.navigator.clipboard.writeText(inputCode.value);
 
     alert("초대코드가 복사 되었습니다.");
 }
@@ -313,153 +298,3 @@ const setVh = () => {
 };
 window.addEventListener('resize', setVh);
 setVh();
-
-$(document).ready(function() {
-
-    cardSlide.init('.flip-card-container');
-
-    $(this).off('click', '#btnPrev').on('click', '#btnPrev', function(e) {
-        e.preventDefault();
-
-        cardSlide.prevClick();
-    });
-
-    $(this).off('click', '#btnNext').on('click', '#btnNext', function(e) {
-        e.preventDefault();
-
-        cardSlide.nextClick();
-    });
-
-    //cardSlide.start();
-});
-
-let cardSlide = {
-    _is_start : false,
-    _container : "",
-    _items : "",
-    _current_index : 0,
-    _limit_index : 0,
-    _interval_id : null,
-    init : function(container) {
-        this._container = $(container);
-        this._items = this._container.find('li');
-        this._current_index = 1;
-        this._limit_index = this._items.length - 1;
-        this._items.each(function(index, item) {
-            switch (index) {
-                case 0 : $(item).css({'transform':'translate3d(0%, 0px, 0px)', 'z-index':(index * -1), 'opacity':'1'}); break;
-                case 1 : $(item).css({'transform':'translate3d(18%, 0px, 0px)', 'z-index':(index * -1), 'opacity':'1'}); break;
-                case 2 : $(item).css({'transform':'translate3d(29%, 0px, 0px)', 'z-index':(index * -1), 'opacity':'1'}); break;
-                case 3 : $(item).css({'transform':'translate3d(37%, 0px, 0px)', 'z-index':(index * -1), 'opacity':'1'}); break;
-                case 4 : $(item).css({'transform':'translate3d(43%, 0px, 0px)', 'z-index':(index * -1), 'opacity':'1'}); break;
-                default : $(item).css({'transform':'translate3d(50%, 0px, 0px)', 'z-index':(index * -1), 'opacity':'0'}); break;
-            }
-        });
-
-        this.showCount();
-    },
-    showCount : function() {
-        var _cur_idx = ( this._current_index < 10 ) ? "0" + this._current_index : this._current_index;
-        var _limit_idx = ( this._limit_index < 10 ) ? "0" + this._limit_index : this._limit_index;
-
-        $('#currntCardNumber').html(_cur_idx);
-        $('#maxCardNumber').html(_limit_idx);
-    },
-    next : function() {
-        var tmp = this._items.length - 1;
-
-        if ( this._is_start ) {
-            var _current_li = $(this._container).find('li:first-child');
-            _current_li.next('li').css({'transform':'translate3d(0%, 0px, 0px)', 'z-index':'0', 'opacity':'1'}).addClass('on');
-            _current_li.next('li').next('li').css({'transform':'translate3d(18%, 0px, 0px)', 'z-index':'-1', 'opacity':'1'});
-            _current_li.next('li').next('li').next('li').css({'transform':'translate3d(29%, 0px, 0px)', 'z-index':'-2', 'opacity':'1'});
-            _current_li.next('li').next('li').next('li').next('li').css({'transform':'translate3d(37%, 0px, 0px)', 'z-index':'-3', 'opacity':'1'});
-            _current_li.next('li').next('li').next('li').next('li').next('li').css({'transform':'translate3d(43%, 0px, 0px)', 'z-index':'-4', 'opacity':'1'});
-            var _tmp_li = _current_li.css({'transform':'translate3d(50%, 0px, 0px)', 'z-index':(tmp * -1), 'opacity':'0'}).removeClass('on');
-            _current_li.remove();
-            _tmp_li.appendTo(this._container);
-
-            if ( this._current_index == this._limit_index ) {
-                this._current_index = 1;
-            } else {
-                this._current_index++;
-            }
-
-            this.showCount();
-        } else {
-            var _current_li = $(this._container).find('li:first-child');
-            _current_li.next('li').css({'transform':'translate3d(0%, 0px, 0px)', 'z-index':'0', 'opacity':'1'}).addClass('on');
-            _current_li.next('li').next('li').css({'transform':'translate3d(18%, 0px, 0px)', 'z-index':'-1', 'opacity':'1'});
-            _current_li.next('li').next('li').next('li').css({'transform':'translate3d(29%, 0px, 0px)', 'z-index':'-2', 'opacity':'1'});
-            _current_li.next('li').next('li').next('li').next('li').css({'transform':'translate3d(37%, 0px, 0px)', 'z-index':'-3', 'opacity':'1'});
-            _current_li.next('li').next('li').next('li').next('li').next('li').css({'transform':'translate3d(43%, 0px, 0px)', 'z-index':'-4', 'opacity':'1'});
-            _current_li.css({'transform':'translate3d(50%, 0px, 0px)', 'z-index':(tmp * -1), 'opacity':'0'}).remove();
-
-            this._items = this._container.find('li');
-            this._is_start = true;
-        }
-    },
-    nextClick : function() {
-        clearInterval(this._interval_id);
-        this.next();
-        this.play();
-    },
-    prev : function() {
-        var tmp = this._items.length - 1;
-
-        if ( this._is_start ) {
-            var _last_li = $(this._container).find('li:last-child');
-            var _tmp_li = _last_li.css({'transform':'translate3d(0%, 0px, 0px)', 'z-index':'0', 'opacity':'1'}).addClass('on');
-            _tmp_li.remove();
-            _tmp_li.prependTo(this._container);
-
-            _tmp_li.next('li').css({'transform':'translate3d(18%, 0px, 0px)', 'z-index':'-1', 'opacity':'1'}).removeClass('on');
-            _tmp_li.next('li').next('li').css({'transform':'translate3d(29%, 0px, 0px)', 'z-index':'-2', 'opacity':'1'});
-            _tmp_li.next('li').next('li').next('li').css({'transform':'translate3d(37%, 0px, 0px)', 'z-index':'-3', 'opacity':'1'});
-            _tmp_li.next('li').next('li').next('li').next('li').css({'transform':'translate3d(43%, 0px, 0px)', 'z-index':'-4', 'opacity':'1'});
-            _tmp_li.next('li').next('li').next('li').next('li').next('li').css({'transform':'translate3d(50%, 0px, 0px)', 'z-index':'-5', 'opacity':'0'});
-        } else {
-
-            var _current_li = $(this._container).find('li:first-child');
-            _current_li.css({'transform':'translate3d(50%, 0px, 0px)', 'z-index':(tmp * -1), 'opacity':'0'}).remove();
-
-            var _last_li = $(this._container).find('li:last-child');
-            var _tmp_li = _last_li.css({'transform':'translate3d(0%, 0px, 0px)', 'z-index':'0', 'opacity':'1'}).addClass('on');
-            _tmp_li.remove();
-            _tmp_li.prependTo(this._container);
-
-            _tmp_li.next('li').css({'transform':'translate3d(18%, 0px, 0px)', 'z-index':'-1', 'opacity':'1'}).removeClass('on');
-            _tmp_li.next('li').next('li').css({'transform':'translate3d(29%, 0px, 0px)', 'z-index':'-2', 'opacity':'1'});
-            _tmp_li.next('li').next('li').next('li').css({'transform':'translate3d(37%, 0px, 0px)', 'z-index':'-3', 'opacity':'1'});
-            _tmp_li.next('li').next('li').next('li').next('li').css({'transform':'translate3d(43%, 0px, 0px)', 'z-index':'-4', 'opacity':'1'});
-            _tmp_li.next('li').next('li').next('li').next('li').next('li').css({'transform':'translate3d(50%, 0px, 0px)', 'z-index':'-5', 'opacity':'0'});
-
-            this._items = this._container.find('li');
-            this._is_start = true;
-        }
-
-        if ( this._current_index == 1 ) {
-            this._current_index = this._limit_index;
-        } else {
-            this._current_index--;
-        }
-        this.showCount();
-    },
-    prevClick : function() {
-        clearInterval(this._interval_id);
-        this.prev();
-        this.play();
-    },
-    start : function() {
-        setTimeout(function() {
-            cardSlide.play();
-        }, 1300);
-    },
-    play : function() {
-        clearInterval(this._interval_id);
-
-        this._interval_id = setInterval(function() {
-            cardSlide.next();
-        }, 1300);
-    }
-};
