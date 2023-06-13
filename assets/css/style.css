@@ -273,7 +273,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
     .missionPlayArea .playItemGroup .playItem{display: flex;flex-direction: row;flex-wrap: wrap;}
     .playItem .number{display: none;}
     .playItem .mobileNumber{display: flex;}
-    .playItem .mobileNumber:after{content: "";position: absolute;bottom: -9px;left: 0;width: 58px;height: 9px;background-image: url(../images/img_playNum_arrow_m.svg);background-position: center bottom;background-repeat: no-repeat;z-index: 1;}
+    .playItem .mobileNumber:after{content: "";position: absolute;left: -1px;bottom: -9px;width: 58px;height: 9px;background-image: url(../images/img_playNum_arrow_m.svg);background-position: center bottom;background-repeat: no-repeat;z-index: 1;}
     .playItem:last-child .mobileNumber:after{display: none;}
     .playItem .item{display: flex;width: calc(100% - 58px);border-top: 1px solid #8B978F;border-left: 0;align-items: center;}
     .playItem + .playItem .item{margin-left: 0;margin-top: -1px;}
