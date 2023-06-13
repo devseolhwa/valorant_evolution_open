@@ -93,7 +93,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .missionBody{display: flex;align-items: center;justify-content: space-between;}
 .missionPlayArea{position: relative;margin-top: 20px;}
 .bounceRedBox{position: absolute;top: -57px;left: 79px;display: flex;align-items: center;justify-content: center;width: auto;padding: 7px 8px;background: #ece8e1;border: 1px solid #FF4655;box-sizing: border-box;font-weight: 700;font-size: 14px;line-height: 145%;color: #FF4655;-webkit-animation: bounceBox 3s infinite;-moz-animation: bounceBox 3s infinite;-ms-animation: bounceBox 3s infinite;-o-animation: bounceBox 3s infinite;animation: bounceBox 3s infinite;}
-.bounceRedBox p:after{content: "";position: absolute;bottom: -12px;left: 19px;width: 16px;height: 13px;background-color: #ece8e1;background-image: url(../images/v.svg);background-repeat: no-repeat;z-index: 1;}
+.bounceRedBox p:after{content: "";position: absolute;bottom: -11px;left: 19px;width: 15px;height: 13px;background-color: #ece8e1;background-image: url(../images/v.svg);background-position: center bottom;background-repeat: no-repeat;z-index: 1;}
 .missionPlayArea .playItemGroup{display: flex;}
 .playItem .number{position: relative;display: flex;align-items: center;justify-content: center;height: 48px;background: #545454;border: 1px solid #8B978F;box-sizing: border-box;font-size: 20px;color: #ECE8E1;font-weight: 700;line-height: 105%;text-align: center;letter-spacing: -0.01em;}
 .playItem .mobileNumber{display: none;position: relative;justify-content: center;align-items: center;width: 58px;background: #545454;border: 1px solid #8B978F;box-sizing: border-box;font-size: 16px;color: #ECE8E1;font-weight: 700;line-height: 105%;text-align: center;letter-spacing: -0.01em;}
