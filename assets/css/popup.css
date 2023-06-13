@@ -6,7 +6,7 @@
 .modarPopup{position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0, 0, 0, 0.7);-webkit-overflow-scrolling: touch;z-index: 99999;opacity: 0;overflow-y: auto;overflow-x: hidden;visibility: hidden;-webkit-transition: all 0.5s ease;transition: all 0.5s ease;-webkit-transition-property: opacity, visibility;transition-property: opacity, visibility;-webkit-transition-delay: 100ms;transition-delay: 100ms;-ms-overflow-style: none;scrollbar-width: none;}
 .modarPopup::-webkit-scrollbar{display: none;}
 .modarCenter{position: absolute;width: 100%;height: auto;min-height: 100%;display: flex;justify-content: center;align-items: center;/* padding: 40px 0; */box-sizing: border-box;}
-.modarInner{position: relative;max-width: 100%;/* min-height: 360px; */padding: 40px;background: #ECE8E1;box-sizing: border-box;-webkit-animation: slideOutDown 0.5s;-moz-animation: slideOutDown 0.5s;-ms-animation: slideOutDown 0.5s;-o-animation: slideOutDown 0.5s;animation: slideOutDown 0.5s;-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards;overflow: hidden;}
+.modarInner{position: relative;max-width: 100%;width: 520px;/* min-height: 360px; */padding: 40px;background: #ECE8E1;box-sizing: border-box;-webkit-animation: slideOutDown 0.5s;-moz-animation: slideOutDown 0.5s;-ms-animation: slideOutDown 0.5s;-o-animation: slideOutDown 0.5s;animation: slideOutDown 0.5s;-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards;overflow: hidden;color: #0F1923;}
 .modarPopup.md .modarInner{width: 520px;}
 .modarPopup.lg .modarInner{width: 800px;}
 .modarPopup .modarBody{/* opacity: 1; */height: 0;transition: 2.5s;-webkit-transition: 2.5s;}
@@ -41,7 +41,7 @@
 .popupTextMd{margin: 5px 0 20px;font-size: 20px;color: #2D2D2D;font-weight: 700;line-height: 150%;text-align: center;word-break: keep-all;}
 .popupTextLg{margin: 90px 0 80px;font-size: 24px;color: #0F1923;font-weight: 600;line-height: 160%;text-align: center;word-break: keep-all;}
 .popupTextSm + .popupTextXs{margin: -35px 0 40px;}
-.scrollBox{max-height: 462px;overflow-y: auto;margin-top: 20px;font-size: 16px;line-height: 190%;font-weight: 400;letter-spacing: -0.01em;word-break: keep-all;scrollbar-color: #8B978F #CDC7BD;scrollbar-width: thin;}
+.scrollBox{max-height: 462px;overflow-y: auto;margin-top: 20px;font-size: 16px;line-height: 190%;font-weight: 400;letter-spacing: -0.01em;word-break: break-word;scrollbar-color: #8B978F #CDC7BD;scrollbar-width: thin;}
 .scrollBox::-webkit-scrollbar {width: 6px;}/* 스크롤 바 */
 .scrollBox::-webkit-scrollbar-track {background-color: #CDC7BD;}/* 스크롤 바 밑의 배경 */
 .scrollBox::-webkit-scrollbar-thumb {background: #8B978F;}/* 실질적 스크롤 바 */
