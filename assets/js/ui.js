@@ -18,23 +18,15 @@ $(document).ready(function(){
         return false;
     });
 
-    // pc mobile 환경체크
-    let filter = "win16|win32|win64|mac";
-    if(navigator.platform){
-        if(0 > filter.indexOf(navigator.platform.toLowerCase())){
-            //alert("Mobile");
-            $(".floating").hide();
-        }else{
-            //alert("PC");
-            // floating 스크롤후 나타나기
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $(".floating").fadeIn("slow");
-                }else {
-                    $(".floating").fadeOut("slow");
-                }
-            });
-        }
+    let floatingCheck = $(".floating");
+    if (floatingCheck.length) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $(".floating").fadeIn("slow");
+            }else {
+                $(".floating").fadeOut("slow");
+            }
+        });
     }
 
     function textEffect(){
@@ -180,7 +172,7 @@ $(document).ready(function(){
     if (updateSectionCheck.length) {
         $(".updateThumbSlide").on("init", function (event, slick) {
             bgChange();
-            $(".updateArrow .prev").addClass("slick-disabled");
+            //$(".updateArrow .prev").addClass("slick-disabled");
         });
         $(".updateThumbSlide").slick({
             variableWidth: true,
@@ -199,7 +191,7 @@ $(document).ready(function(){
             asNavFor: ".updateTextSlide",
         }).on("afterChange", function (event, slick, currentSlide) {
             bgChange();
-            if (currentSlide === 0) {
+            /* if (currentSlide === 0) {
                 $(".updateArrow .prev").addClass("slick-disabled");
                 $(".updateArrow .next").removeClass("slick-disabled");
             } else {
@@ -209,7 +201,7 @@ $(document).ready(function(){
                 $(".updateArrow .next").addClass("slick-disabled");
             } else {
                 $(".updateArrow .next").removeClass("slick-disabled");
-            }
+            } */
         });
         $(".updateTextSlide").slick({
             fade: true,
@@ -230,11 +222,13 @@ $(document).ready(function(){
     var isVisible = false;
 
     $(window).on("scroll",function() {
-        if (checkVisible($(".updateThumbSlide"))&&!isVisible){
-            $(".updateSection").addClass("start");
-            $(".updateThumbSlide, .updateTextSlide").slick("slickPlay");
-            isVisible = true;
-            return true;
+        if (updateSectionCheck.length) {
+            if (checkVisible($(".updateThumbSlide"))&&!isVisible){
+                $(".updateSection").addClass("start");
+                $(".updateThumbSlide, .updateTextSlide").slick("slickPlay");
+                isVisible = true;
+                return true;
+            }
         }
     });
     function checkVisible( elm, eval ) {
@@ -248,16 +242,17 @@ $(document).ready(function(){
         if (eval == "above") return ((y < (viewportHeight + wscrolltop)));
     }
 
-    
     var isVisible2 = false;
 
     $(window).on("scroll",function() {
-        if (checkVisible2($(".cardOpenWrap"))&&!isVisible2){
-            setTimeout(function(){
-                $(".cardGetSection").addClass("start");
-            }, 500);
-            isVisible2 = true;
-            return true;
+        if (cardSlideSectionCheck.length) {
+            if (checkVisible2($(".cardOpenWrap"))&&!isVisible2){
+                setTimeout(function(){
+                    $(".cardGetSection").addClass("start");
+                }, 500);
+                isVisible2 = true;
+                return true;
+            }
         }
     });
     function checkVisible2( elm_, eval_ ) {
@@ -281,15 +276,6 @@ function urlCopy() {
     var x = document.getElementById("toast")
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
-}
-function codeCopy() {
-    // 친구 초대 코드 복사
-    const inputCode = document.getElementById("inputCode");
-    //inputCode.select();
-    //document.execCommand("copy");
-    window.navigator.clipboard.writeText(inputCode.value);
-
-    alert("초대코드가 복사 되었습니다.");
 }
 
 // ios 사파리 height

@@ -8,26 +8,21 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .tabletShowInline {display: none !important;}
 
 /* text */
-.titleLg{display: block;margin-top: 22px;font-size: 150px;font-size: min(7.8vw, 150px);line-height: 1;font-weight: 400;font-family:'Black Han Sans', "Apple SD Gothic Neo";text-align: center;letter-spacing: -0.01em;}
+.titleLg{display: block;margin-top: 22px;font-size: 150px;font-size: min(7.8vw, 150px);line-height: 1;font-weight: 400;font-family:'Black Han Sans', 'Apple SD Gothic Neo';text-align: center;letter-spacing: -0.01em;}
 .textSm{font-size: 20px;line-height: 140%;font-weight: 500;text-align: center;letter-spacing: 0.2em;}
 .textMd{font-size: 23px;line-height: 140%;font-weight: 700;text-align: center;letter-spacing: 0.2em;}
 .colorDark{color: #222 !important;}
 .colorRed{color:#FF4655 !important;}
 .colorWhite{color:#fff !important;}
 .colorGray{color:#ECE8E1 !important;}
-.fontLtPro{font-family: "DINNextLTPro-Regular";font-feature-settings: 'salt' on;}
+.fontLtPro{font-family: 'DINNextLTPro-Regular';font-feature-settings: 'salt' on;}
 
 /* btn */
 .btn{position: relative;display: inline-block;box-sizing: border-box;text-align: center;cursor: pointer;overflow: hidden;}
 .btn.full{width: 100%;}
-.btn.sm{/* min-width: 128px;height: 36px;font-size: 16px;font-weight: 700;text-align: center; */}
 .btn.md{height: 72px;font-size: 20px;font-weight: 700;text-align: center;}
-.btn.lg{/* height: 76px;font-size: 24px;line-height: 150%;font-weight: 700;text-align: center; */}
-
 .btnBgGray{width: 165px;height: 60px !important;background-color: #CDC9C2;color: #A09D96;cursor: inherit;pointer-events: none;}
 .btnBgGray.on{background-color: #FF4655;color: #ECE8E1;cursor: pointer;pointer-events: inherit;}
-
-
 #btnEvent{position: absolute;right: 60px;top: 120px;font-size: 20px;color: #fff;font-weight: 700;line-height: 100%;letter-spacing: 0.1em;transform: rotate(90deg);}
 #btnEvent span{position: relative;}
 #btnEvent span:before{content: "";display: block;position: absolute;bottom: 0;left: 0;width: 100%;height: 1px;background-color: #fff;transform-origin: left center;transition: transform 300ms ease-in-out;-webkit-animation: fillLine 1s ease-in-out both;-moz-animation: fillLine 1s ease-in-out both;-ms-keyframes: fillLine 1s ease-in-out both;-o-animation: fillLine 1s ease-in-out both;animation: fillLine 1s ease-in-out both;}
@@ -71,7 +66,6 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .floating a:before{content: "";position: absolute;left: 0;top: 0; width: 4px;height: 4px;background: #0F1923;}
 .floating a:after{content: "";position: absolute;right: 0;bottom: 0; width: 4px;height: 4px;background: #0F1923;}
 .floating a p{margin-top: 12px;font-size: 17px;color: #ECE8E1;line-height: 130%;font-weight: 700;text-align: center;}
-
 
 .visualSection{position: relative;}
 .visualSection .visualVedio{position: absolute;top: 0;bottom: 0;left: 0;right: 0;width: 100%;max-height: 100%;height: 42vw;overflow: hidden;}
@@ -137,7 +131,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .cardGetInfo .cardGetValue .cardGetNum{display: flex;flex-direction: column;flex-wrap: wrap;align-items: flex-start;padding-left: 50px;background-image: url(../images/icon_dotArrow_lg.svg);background-position: 10px 9px;background-repeat: no-repeat;}
 .cardGetInfo .cardGetValue .cardGetNum p{font-size: 24px;color: #ECE8E1;font-weight: 700;line-height: 140%;letter-spacing: 0.07em;}
 .cardGetInfo .cardGetValue .cardGetNum p span{display: none;}
-.cardGetInfo .cardGetValue .cardGetNum strong{margin-top: 20px;font-size: 180px;;color: #ECE8E1;font-weight: 400;line-height: 80%;letter-spacing: 0.02em;font-family: "Tungsten-Bold";}
+.cardGetInfo .cardGetValue .cardGetNum strong{margin-top: 20px;font-size: 180px;;color: #ECE8E1;font-weight: 400;line-height: 80%;letter-spacing: 0.02em;font-family: 'Tungsten-Bold';}
 .cardGetInfo .cardGetValue .cardGetNum strong.off{opacity: 0.5;}
 .cardGetInfo .cardGetValue .cardGetNum .btnGetDetails{margin-top: 5px;font-size: 16px;color: #ECE8E1;font-weight: 700;line-height: 150%;text-decoration-line: underline;z-index: 1;}
 .cardGetInfo .cardGetValue .teamPlayNum{display: flex;flex-direction: column;flex-wrap: wrap;margin-top: 5px;}
@@ -159,7 +153,6 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .cardOpenWrap .btnLine .btnCardOpen[disabled]{background: #5C5C5C;color: #969191;pointer-events: none;}
 .cardGetSection.start .cardOpenWrap .cardBackImg div:nth-child(1){top: 17px;left: calc(50% + 26px);transform: translateX(-50%) rotate(12.14deg);}
 .cardGetSection.start .cardOpenWrap .cardBackImg div:nth-child(2){top: 6px;left: calc(50% - 21px);transform: translateX(-50%) rotate(-7.03deg);}
-
 
 .cardSlideSection{display: flex;justify-content: center;align-items: center;padding: 116px 0 125px;background-color: #0F1923;background-image: url(../images/bg_cardSlide.png);background-size: cover;background-position: center;box-sizing: border-box;}
 .cardSlideSection .cardSlideInner{width: 100%;}
@@ -314,7 +307,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 
     .btn.md{font-size: 16px;}
     .btn.lg{font-size: 20px;}
-
+    .btnBgGray {width: 115px;height: 55px !important;}
     #btnEvent{top: 85px;right: -22px;font-size: 12px;}
 
     .scrolltop{display: none;}
@@ -412,24 +405,24 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 }
 
 @-webkit-keyframes fillLine {
-    0% {transform: scaleX(0%);}
-    100% {transform: scaleX(100%);}
+    0% {-webkit-transform: scaleX(0%);transform: scaleX(0%);}
+    100% {-webkit-transform: scaleX(100%);transform: scaleX(100%);}
 }
 @-moz-keyframes fillLine {
-    0% {transform: scaleX(0%);}
-    100% {transform: scaleX(100%);}
+    0% {-webkit-transform: scaleX(0%);transform: scaleX(0%);}
+    100% {-webkit-transform: scaleX(100%);transform: scaleX(100%);}
 }
 @-ms-keyframes fillLine {
-    0% {transform: scaleX(0%);}
-    100% {transform: scaleX(100%);}
+    0% {-webkit-transform: scaleX(0%);transform: scaleX(0%);}
+    100% {-webkit-transform: scaleX(100%);transform: scaleX(100%);}
 }
 @-o-keyframes fillLine {
-    0% {transform: scaleX(0%);}
-    100% {transform: scaleX(100%);}
+    0% {-webkit-transform: scaleX(0%);transform: scaleX(0%);}
+    100% {-webkit-transform: scaleX(100%);transform: scaleX(100%);}
 }
 @keyframes fillLine {
-    0% {transform: scaleX(0%);}
-    100% {transform: scaleX(100%);}
+    0% {-webkit-transform: scaleX(0%);transform: scaleX(0%);}
+    100% {-webkit-transform: scaleX(100%);transform: scaleX(100%);}
 }
 
 @-webkit-keyframes bounceBox {
@@ -437,7 +430,6 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
         -webkit-transform: translate(0, -5%);
         transform: translate(0, -5%);
     }
-
     50% {
         -webkit-transform: translate(0, 5%);
         transform: translate(0, 5%);
@@ -448,7 +440,6 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
         -webkit-transform: translate(0, -5%);
         transform: translate(0, -5%);
     }
-
     50% {
         -webkit-transform: translate(0, 5%);
         transform: translate(0, 5%);
@@ -459,7 +450,6 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
         -webkit-transform: translate(0, -5%);
         transform: translate(0, -5%);
     }
-
     50% {
         -webkit-transform: translate(0, 5%);
         transform: translate(0, 5%);
@@ -470,7 +460,6 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
         -webkit-transform: translate(0, -5%);
         transform: translate(0, -5%);
     }
-
     50% {
         -webkit-transform: translate(0, 5%);
         transform: translate(0, 5%);
@@ -481,7 +470,6 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
         -webkit-transform: translate(0, -5%);
         transform: translate(0, -5%);
     }
-
     50% {
         -webkit-transform: translate(0, 5%);
         transform: translate(0, 5%);
