@@ -111,7 +111,7 @@
     .modarPopup.md .modarInner{width: calc(100% - 40px);}
     .modarPopup.lg .modarInner{width: calc(100% - 40px);}
     .modarPopup.modarPopupFull .modarCenter{padding: 0;}
-    .modarPopup.modarPopupFull .modarInner{width: 100%;height: 100%;min-height: 100vh;}
+    .modarPopup.modarPopupFull .modarInner{width: 100%;height: 100%;min-height: 100vh;min-height: var(--vh);}
     .firstPopupBoxOpen.modarPopupFull.lg .modarInner{display: flex;justify-content: center;align-items: center;}
     .jsModarClose{height: 60px;font-size: 28px;}
     .btnCloseModar{right: 30px;top: 30px;}
