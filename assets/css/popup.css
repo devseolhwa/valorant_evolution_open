@@ -9,7 +9,7 @@
 .modarInner{position: relative;max-width: 100%;width: 520px;/* min-height: 360px; */padding: 40px;background: #ECE8E1;box-sizing: border-box;-webkit-animation: slideOutDown 0.5s;-moz-animation: slideOutDown 0.5s;-ms-animation: slideOutDown 0.5s;-o-animation: slideOutDown 0.5s;animation: slideOutDown 0.5s;-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards;overflow: hidden;color: #0F1923;}
 .modarPopup.md .modarInner{width: 520px;}
 .modarPopup.lg .modarInner{width: 800px;}
-.modarPopup .modarBody{/* opacity: 1; */height: 0;transition: 2.5s;-webkit-transition: 2.5s;}
+.modarPopup .modarBody{/* opacity: 1; */height: 0;transition: 1.5s;-webkit-transition: 1.5s;}
 .prizeItemImg{text-align: center;}
 .jsModarClose{display: block;width: 100%;height: 72px;background: #CDC9C2;font-size: 36px;color: #A09D96;font-family: "Black Han Sans", sans-serif;cursor: inherit;pointer-events: none;}
 .jsModarClose.on{background: #FF4655;color: #ECE8E1;cursor: pointer;pointer-events: inherit;}
@@ -20,7 +20,7 @@
 
 .firstPopupBox{opacity: 0;position: absolute;left: 0;top: 0;overflow: hidden; width: 100%;height: 100%;padding: 80px 40px 80px;background: #ECE8E1;box-sizing: border-box;z-index: -1;transition: .5s;-webkit-transition: .5s;}
 .firstPopupBox .flipImg{position: relative;width: 181px;height: 260px;margin: 38px auto 36px;perspective: 500px;}
-.firstPopupBox .flipImg:after{content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 0;height: 0;background: #ECE8E1;box-shadow: 0px 0px 150px #ECE8E1;border-radius: 100%;}
+.firstPopupBox .flipImg:after{content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 0;height: 0;background: #ECE8E1;box-shadow: 0px 0px 100px #ECE8E1;filter: drop-shadow(0 0 20px #ECE8E1);border-radius: 100%;}
 .firstPopupBox .flipImg .flipImgInner{position: absolute;width: 100%;height: 100%;transform-style: preserve-3d;}
 .firstPopupBox .flipImg .flipImgInner .front, .firstPopupBox .flipImg .flipImgInner .back{position: absolute;height: 100%;width: 100%;line-height: 1;text-align: center;backface-visibility: hidden;}
 .firstPopupBox .flipImg .flipImgInner .front {transform: rotateY(180deg);}
