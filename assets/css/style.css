@@ -127,14 +127,14 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 .cardGetInfo .phoneConfirm{display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: space-between;max-width: 584px;padding: 12px 21px 13px 27px;margin-top: 30px;background: #ECE8E1;border: 1px solid #ECE8E1;box-sizing: border-box;}
 .cardGetInfo .phoneConfirm p{max-width: 343px;width: calc(100% - 162px);font-weight: 700;font-size: 16px;line-height: 150%;color: #0F1923;word-break: keep-all;}
 .cardGetInfo .phoneConfirm .btnGetDetails{width: 162px;height: 51px;background: #0F1923;font-size: 18px;color: #ECE8E1;font-weight: 800;}
-.cardGetInfo .cardGetValue{display: flex;align-items: flex-start;justify-content: space-between;flex-direction: row;flex-wrap: wrap;margin-top: 55px;}
+.cardGetInfo .cardGetValue{display: flex;align-items: flex-start;justify-content: space-between;flex-direction: row;flex-wrap: wrap;width: 100%;min-width: 555px;margin-top: 55px;}
 .cardGetInfo .cardGetValue .cardGetNum{display: flex;flex-direction: column;flex-wrap: wrap;align-items: flex-start;padding-left: 50px;background-image: url(../images/icon_dotArrow_lg.svg);background-position: 10px 9px;background-repeat: no-repeat;}
 .cardGetInfo .cardGetValue .cardGetNum p{font-size: 24px;color: #ECE8E1;font-weight: 700;line-height: 140%;letter-spacing: 0.07em;}
 .cardGetInfo .cardGetValue .cardGetNum p span{display: none;}
 .cardGetInfo .cardGetValue .cardGetNum strong{margin-top: 20px;font-size: 180px;;color: #ECE8E1;font-weight: 400;line-height: 80%;letter-spacing: 0.02em;font-family: 'Tungsten-Bold';}
 .cardGetInfo .cardGetValue .cardGetNum strong.off{opacity: 0.5;}
 .cardGetInfo .cardGetValue .cardGetNum .btnGetDetails{margin-top: 5px;font-size: 16px;color: #ECE8E1;font-weight: 700;line-height: 150%;text-decoration-line: underline;z-index: 1;}
-.cardGetInfo .cardGetValue .teamPlayNum{display: flex;flex-direction: column;flex-wrap: wrap;margin-top: 5px;margin-right: 30px;}
+.cardGetInfo .cardGetValue .teamPlayNum{display: flex;flex-direction: column;flex-wrap: wrap;margin-top: 4px;margin-right: 30px;}
 .cardGetInfo .cardGetValue .teamPlayNum > p{font-size: 18px;color: #ECE8E1;font-weight: 600;line-height: 150%;}
 .cardGetInfo .cardGetValue .teamPlayNum > p > span{margin-left: 20px;}
 .cardGetInfo .cardGetValue .teamPlayNum .textBalloon{position: relative;display: flex;align-items: center;justify-content: center;width: 270px;height: 106px;padding-top: 16px;margin-top: 20px;background-image: url(../images/bg_textBalloon.svg);background-size: 100%;background-repeat: no-repeat;box-sizing: border-box;-webkit-animation: bounceBox 3s infinite;-moz-animation: bounceBox 3s infinite;-ms-animation: bounceBox 3s infinite;-o-animation: bounceBox 3s infinite;animation: bounceBox 3s infinite;}
@@ -239,6 +239,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
     .cardGetSection .cardGetInner{padding: 60px 3% 85px;}
     .cardGetInfo{width: 50%;}
     .cardGetInfo .phoneConfirm{max-width: inherit;}
+    .cardGetInfo .cardGetValue{min-width: inherit;}
     .cardGetInfo .cardGetValue .cardGetNum{padding-left: 40px;}
     .cardGetInfo .cardGetValue .cardGetNum strong{font-size: 160px;}
     .cardGetInfo .cardGetValue .teamPlayNum{margin-right: 0;}
@@ -372,13 +373,13 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
     .cardOpenWrap .cardBackImg div{width: 191px;}
     .cardOpenWrap .btnLine .btnLoginChk, .cardOpenWrap .btnLine .btnCardOpen{width: 243px;height: 60px;font-size: 18px;}
 
-    .cardSlideSection{padding: 60px 0;}
+    .cardSlideSection{padding: 60px 0;background-image: none;}
     .cardSlideHeader{margin-bottom: 40px;}
     .cardSlideHeader strong{font-size: min(7.5vw, 28px);}
     .cardSlideHeader h3{margin-top: 6px;font-size: min(16vw, 60px);}
     .cardSlideHeader p{font-size: min(3.8vw, 14px);}
     .cardSlideWrap{padding: 25px 0;}
-    .cardSlideWrap:before{background-size: 220px auto;}
+    .cardSlideWrap:before{background-image: url(../images/bg_cardFrame_m.png);}
     .cardSlider .slideItem img{width: 220px;height: 220px;}
     .cardSlider .slideItem .name{max-width: 220px;height: 50px;font-size: 20px;}
 
