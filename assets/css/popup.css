@@ -29,8 +29,8 @@
 .modarPopup .modarBody.heightauto{height: auto;}
 .modarPopup.firstPopupBoxOpen .modarInner{min-height: 680px;}
 .modarPopup.firstPopupBoxOpen .firstPopupBox{opacity: 1;z-index: 12;-webkit-animation: fadeinout 2.5s linear forwards;-moz-animation: fadeinout 2.5s linear forwards;-ms-animation: fadeinout 2.5s linear forwards;-o-animation: fadeinout 2.5s linear forwards;animation: fadeinout 2.5s linear forwards;}
-.modarPopup.firstPopupBoxOpen .flipImg:after{-webkit-animation: fadescale 0.5s 2s linear forwards;-moz-animation: fadescale 0.5s 2s linear forwards;-ms-animation: fadescale 0.5s 2s linear forwards;-o-animation: fadescale 0.5s 2s linear forwards;animation: fadescale 0.5s 2s linear forwards;}
-.modarPopup.firstPopupBoxOpen .flipImgInner{-webkit-animation: flip 2s cubic-bezier(1, 0, 1, 0.5) forwards;-moz-animation: flip 2s cubic-bezier(1, 0, 1, 0.5) forwards;-ms-animation: flip 2s cubic-bezier(1, 0, 1, 0.5) forwards;-o-animation: flip 2s cubic-bezier(1, 0, 1, 0.5) forwards;animation: flip 2s cubic-bezier(1, 0, 1, 0.5) forwards;}
+.modarPopup.firstPopupBoxOpen .flipImg:after{-webkit-animation: fadescale 0.7s 1.8s linear forwards;-moz-animation: fadescale 0.7s 1.8s linear forwards;-ms-animation: fadescale 0.7s 1.8s linear forwards;-o-animation: fadescale 0.7s 1.8s linear forwards;animation: fadescale 0.7s 1.8s linear forwards;}
+.modarPopup.firstPopupBoxOpen .flipImgInner{-webkit-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;-moz-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;-ms-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;-o-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;}
 
 .popupTitleXs{margin-top: 34px;font-size: 28px;color: #0F1923;font-weight: 600;line-height: 150%;word-break: keep-all;}
 .popupTitleSm{padding-right: 30px;font-size: 24px;color: #0F1923;font-weight: 600;line-height: 160%;word-break: keep-all;}
