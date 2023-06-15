@@ -34,7 +34,7 @@
 
 .popupTitleXs{margin-top: 34px;font-size: 28px;color: #0F1923;font-weight: 600;line-height: 150%;word-break: keep-all;}
 .popupTitleSm{padding-right: 30px;font-size: 24px;color: #0F1923;font-weight: 600;line-height: 160%;word-break: keep-all;}
-.popupTitleMd{margin: 50px 0 15px;font-size: 60px;color: #0F1923;font-weight: 400;line-height: 100%;text-align: center;letter-spacing: -0.03em;font-family: "Black Han Sans", sans-serif;word-break: keep-all;}
+.popupTitleMd{margin: 50px 0 15px;font-size: 60px;color: #0F1923;font-weight: 400;line-height: 100%;text-align: center;letter-spacing: -0.05em;font-family: "Black Han Sans", sans-serif;word-break: keep-all;}
 .popupTitleLg{font-size: 72px;color: #2D2D2D;font-weight: 400;line-height: 110%;letter-spacing: -0.02em;font-family: "Black Han Sans", sans-serif;text-align: center;}
 .popupTextXs{margin: 10px 0 40px;font-size: 16px;color: #4A4A4A;font-weight: 700;line-height: 170%;text-align: left;word-break: keep-all;}
 .popupTextSm{margin: 15px 0 40px;font-size: 18px;color: #0F1923;font-weight: 500;line-height: 160%;text-align: center;word-break: keep-all;}

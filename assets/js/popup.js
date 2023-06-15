@@ -38,6 +38,7 @@ function modarOpen(_target) {
         $(".modarBody").addClass("heightauto");
         $(_target).fadeIn("fast").addClass("show");
         $(_target).attr("tabindex", "0").focus();
+        $(_target).find(".scrollBox, .itemList ul").scrollTop(0);
         bodyScroll(true, $("body").width());
     }
 }
