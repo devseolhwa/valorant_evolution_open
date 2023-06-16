@@ -333,6 +333,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
 
     .visualSection .visualInner{max-width: 100%;padding: 0 20px;}
     .visualSection .visualInner:before, .visualSection .visualInner:after{display: none;}
+    .visualSection .visualInner .visualText .textValorant img{width: 125px;}
     .visualSection .visualInner .visualText p{margin-top: 5px;font-size: 18px;line-height: 160%;}
     .visualSection .visualInner .visualText + .btnLine{margin-top: 55px;}
     .visualSection .btnEventJoin{width: 243px;height: 60px;font-size: 18px;}
