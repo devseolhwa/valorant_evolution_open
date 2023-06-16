@@ -293,6 +293,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
     .cardGetInfo:before{content: "";position: absolute;left: 0;bottom: -30px;width: 50%;height: 0;border-bottom: 0px solid #ff4655;border-top: 30px solid #ff4655;border-right: 25px solid transparent;border-left: 0 solid #ff4655;z-index: 1;}
     .cardGetInfo .cardGetInfoInner{position: relative;max-width: 600px;margin: 0 auto;padding-top: 26px;}
     .cardGetInfo .cardGetHeader h3{font-size: 47px;}
+    .cardGetInfo .cardGetHeader p{font-size: 28px;}
     .cardGetInfo .cardGetValue .cardGetNum{padding-left: 0;background-image: none;}
     .cardGetInfo .cardGetValue .cardGetNum p span{display: inline-block;margin-right: 10px;}
     .cardOpenWrap{width: 100%;padding: 60px 20px 63px;background-image: url(../images/bg_cardGet_m.png);background-position: center;background-size: cover;background-repeat: no-repeat;box-sizing: border-box;}
