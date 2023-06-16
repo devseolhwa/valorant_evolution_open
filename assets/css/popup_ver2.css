@@ -34,7 +34,7 @@
 
 .popupTitleXs{margin-top: 34px;font-size: 28px;color: #0F1923;font-weight: 600;line-height: 150%;word-break: keep-all;}
 .popupTitleSm{padding-right: 30px;font-size: 24px;color: #0F1923;font-weight: 600;line-height: 160%;word-break: keep-all;}
-.popupTitleMd{margin: 50px 0 15px;font-size: 60px;color: #0F1923;font-weight: 400;line-height: 100%;text-align: center;letter-spacing: -0.05em;font-family: "Black Han Sans", sans-serif;word-break: keep-all;}
+.popupTitleMd{margin: 50px 0 15px;font-size: 60px;color: #2D2D2D;font-weight: 400;line-height: 100%;text-align: center;letter-spacing: -0.05em;font-family: "Black Han Sans", sans-serif;word-break: keep-all;}
 .popupTitleLg{font-size: 72px;color: #2D2D2D;font-weight: 400;line-height: 110%;letter-spacing: -0.02em;font-family: "Black Han Sans", sans-serif;text-align: center;}
 .popupTextXs{margin: 10px 0 40px;font-size: 16px;color: #4A4A4A;font-weight: 700;line-height: 170%;text-align: left;word-break: keep-all;}
 .popupTextSm{margin: 15px 0 40px;font-size: 18px;color: #0F1923;font-weight: 500;line-height: 160%;text-align: center;word-break: keep-all;}
@@ -96,8 +96,8 @@
 .itemList ul::-webkit-scrollbar-thumb {background: #8B978F;}/* 실질적 스크롤 바 */
 .itemList ul::-webkit-scrollbar-thumb:hover {background: #545a56;}/* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
 .itemList ul::-webkit-scrollbar-thumb:active {background: #545a56;}/* 실질적 스크롤 바를 클릭할 때 */
-.itemList ul li{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;align-items: center;padding: 20px 0;border-bottom: 1px solid #CBCBCB;box-sizing: border-box;}
-.itemList ul li:first-child{padding-top: 0;}
+.itemList ul li{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;align-items: center;padding: 20px 0;border-top: 1px solid #CBCBCB;box-sizing: border-box;}
+.itemList ul li:first-child{padding-top: 0;border-top: 0;}
 .itemList ul li .title{width: 85px;font-size: 18px;color: #A09D96;font-weight: 400;line-height: 150%;text-align: center;word-break: keep-all;}
 .itemList ul li .text{display: flex;justify-content: space-between;align-items: center;flex-direction: row;flex-wrap: wrap;width: calc(100% - 85px);}
 .itemList ul li .text div{width: calc(100% - 160px);padding: 0 20px;box-sizing: border-box;}
