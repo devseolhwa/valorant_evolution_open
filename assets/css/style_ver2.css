@@ -380,7 +380,7 @@ body{margin-top: 80px !important;overflow: auto !important;height: 100% !importa
     .cardSlideHeader h3{margin-top: 6px;font-size: min(16vw, 60px);}
     .cardSlideHeader p{font-size: min(3.8vw, 14px);}
     .cardSlideWrap{padding: 25px 0;}
-    .cardSlideWrap:before{background-image: url(../images/bg_cardFrame_m.png);}
+    .cardSlideWrap:before{background-image: url(../images/bg_cardFrame_m.png);background-size: 220px auto;}
     .cardSlider .slideItem img{width: 220px;height: 220px;}
     .cardSlider .slideItem .name{max-width: 220px;height: 50px;font-size: 20px;}
 
