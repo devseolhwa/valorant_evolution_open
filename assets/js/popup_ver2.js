@@ -27,13 +27,13 @@ function modarOpen(_target) {
         }, 100);
         setTimeout(function() { 
             $(".modarBody").addClass("heightauto");
-        }, 2500);
+        }, 4000);
         setTimeout(function() { 
             $(_target).removeClass("firstPopupBoxOpen");
-        }, 2600);
+        }, 4100);
         setTimeout(function() { 
             $(".modarBody").removeClass("on");
-        }, 2600);
+        }, 4100);
     } else {
         $(".modarBody").addClass("heightauto");
         $(_target).fadeIn("fast").addClass("show");

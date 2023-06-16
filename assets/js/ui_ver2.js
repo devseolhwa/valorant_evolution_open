@@ -129,18 +129,28 @@ $(document).ready(function(){
     if (cardSlideSectionCheck.length) {
         $(".cardSlider").slick({
             slidesToShow : 5,
-            slidesToScroll: "auto",
+            slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 2000,
             speed: 800,
             centerMode: true,
             variableWidth: true,
             infinite: true,
-            swipeToSlide: true ,
             draggable: true,
             arrows: false,
             dots: false,
             pauseOnHover: false
+        }).on("beforeChange", function(event, slick, currentSlide, nextSlide) {
+            if (currentSlide !== nextSlide) {
+                $(".slick-center + .slick-cloned").each(function(index, node) {
+                    var $node = $(node);
+                    
+                    setTimeout(function() {
+                        $node.addClass("slick-current");
+                        $node.addClass("slick-center");
+                    });
+                });
+            }
         });
     }
 

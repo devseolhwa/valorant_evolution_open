@@ -23,14 +23,14 @@
 .firstPopupBox .flipImg:after{content: "";position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 0;height: 0;background: #ECE8E1;box-shadow: 0px 0px 50px #ECE8E1;filter: drop-shadow(0 0 20px #ECE8E1);border-radius: 100%;}
 .firstPopupBox .flipImg .flipImgInner{position: absolute;width: 100%;height: 100%;transform-style: preserve-3d;}
 .firstPopupBox .flipImg .flipImgInner .front, .firstPopupBox .flipImg .flipImgInner .back{position: absolute;height: 100%;width: 100%;line-height: 1;text-align: center;backface-visibility: hidden;}
-.firstPopupBox .flipImg .flipImgInner .front {transform: rotateY(180deg);}
+.firstPopupBox .flipImg .flipImgInner .front {transform: rotateY(180deg);-webkit-transform: rotateY(180deg);}
 .firstPopupBox p{font-size: 18px;color: #2D2D2D;font-weight: 600;line-height: 160%;text-align: center;}
 .modarPopup .modarBody.on{opacity: 0;}
 .modarPopup .modarBody.heightauto{height: auto;}
 .modarPopup.firstPopupBoxOpen .modarInner{min-height: 680px;}
-.modarPopup.firstPopupBoxOpen .firstPopupBox{opacity: 1;z-index: 12;-webkit-animation: fadeinout 2.5s linear forwards;-moz-animation: fadeinout 2.5s linear forwards;-ms-animation: fadeinout 2.5s linear forwards;-o-animation: fadeinout 2.5s linear forwards;animation: fadeinout 2.5s linear forwards;}
-.modarPopup.firstPopupBoxOpen .flipImg:after{-webkit-animation: fadescale 0.7s 1.8s linear forwards;-moz-animation: fadescale 0.7s 1.8s linear forwards;-ms-animation: fadescale 0.7s 1.8s linear forwards;-o-animation: fadescale 0.7s 1.8s linear forwards;animation: fadescale 0.7s 1.8s linear forwards;}
-.modarPopup.firstPopupBoxOpen .flipImgInner{-webkit-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;-moz-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;-ms-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;-o-animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;animation: flip 1.8s cubic-bezier(1, 0, 1, 0.5) forwards;}
+.modarPopup.firstPopupBoxOpen .firstPopupBox{opacity: 1;z-index: 12;-webkit-animation: fadeinout 4s linear forwards;-moz-animation: fadeinout 4s linear forwards;-ms-animation: fadeinout 4s linear forwards;-o-animation: fadeinout 4s linear forwards;animation: fadeinout 4s linear forwards;}
+.modarPopup.firstPopupBoxOpen .flipImg:after{-webkit-animation: fadescale 0.5s 3.4s linear forwards;-moz-animation: fadescale 0.5s 3.4s linear forwards;-ms-animation: fadescale 0.5s 3.4s linear forwards;-o-animation: fadescale 0.5s 3.4s linear forwards;animation: fadescale 0.5s 3.4s linear forwards;}
+.modarPopup.firstPopupBoxOpen .flipImgInner{-webkit-animation: flip 3.5s cubic-bezier(0.8, 0, 1, 1) forwards;-moz-animation: flip 3.5s cubic-bezier(0.8, 0, 1, 1) forwards;-ms-animation: flip 3.5s cubic-bezier(0.8, 0, 1, 1) forwards;-o-animation: flip 3.5s cubic-bezier(0.8, 0, 1, 1) forwards;animation: flip 3.5s cubic-bezier(0.8, 0, 1, 1) forwards;}
 
 .popupTitleXs{margin-top: 34px;font-size: 28px;color: #0F1923;font-weight: 600;line-height: 150%;word-break: keep-all;}
 .popupTitleSm{padding-right: 30px;font-size: 24px;color: #0F1923;font-weight: 600;line-height: 160%;word-break: keep-all;}
@@ -412,24 +412,24 @@
 }
 
 @-webkit-keyframes flip {
-    from {transform: rotateY(0deg);} 
-    to {transform: rotateY(180deg);}
+    from {transform: rotateY(0deg);-webkit-transform: rotateY(0deg);} 
+    to {transform: rotateY(540deg);-webkit-transform: rotateY(540deg);}
 }
 @-moz-keyframes flip{
-    from {transform: rotateY(0deg);} 
-    to {transform: rotateY(180deg);}
+    from {transform: rotateY(0deg);-webkit-transform: rotateY(0deg);} 
+    to {transform: rotateY(540deg);-webkit-transform: rotateY(540deg);}
 }
 @-ms-keyframes flip{
-    from {transform: rotateY(0deg);} 
-    to {transform: rotateY(180deg);}
+    from {transform: rotateY(0deg);-webkit-transform: rotateY(0deg);} 
+    to {transform: rotateY(540deg);-webkit-transform: rotateY(540deg);}
 }
 @-o-keyframes flip{
-    from {transform: rotateY(0deg);} 
-    to {transform: rotateY(180deg);}
+    from {transform: rotateY(0deg);-webkit-transform: rotateY(0deg);} 
+    to {transform: rotateY(540deg);-webkit-transform: rotateY(540deg);}
 }
 @keyframes flip {
-    from {transform: rotateY(0deg);} 
-    to {transform: rotateY(180deg);}
+    from {transform: rotateY(0deg);-webkit-transform: rotateY(0deg);} 
+    to {transform: rotateY(540deg);-webkit-transform: rotateY(540deg);}
 }
 
 @-webkit-keyframes fadescale {
